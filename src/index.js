@@ -7,9 +7,12 @@ const bodyParser = require('body-parser')
 // for you, based on your schema.
 const {graphqlExpress, graphiqlExpress} = require('apollo-server-express')
 
+const cors = require('cors')
+
 const schema = require('./schema')
 
 var app = express()
+app.use(cors())
 
 // this is the one endpoint your react will send request to
 app.use('/graphql', bodyParser.json(), graphqlExpress({schema}))
