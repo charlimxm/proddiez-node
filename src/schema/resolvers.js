@@ -1,3 +1,4 @@
+const { find, filter } = require('lodash')
 const products = [
   {
     id: 1,
@@ -18,9 +19,24 @@ const products = [
     subCount: 0
   }
 ]
+const categories = [
+  {
+    id: 1,
+    name: 'Tech'
+  },
+  {
+    id: 2,
+    name: 'Games'
+  },
+  {
+    id: 3,
+    name: 'Books'
+  }
+]
 
 module.exports = {
   Query: {
-    allProducts: () => products
+    allProducts: () => products,
+    allCategories: () => categories
   },
 }

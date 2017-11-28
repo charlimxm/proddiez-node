@@ -10,8 +10,14 @@ const typeDefs = `
     subCount: Int
   }
 
+  type Category {
+    id: ID!
+    name: String!
+  }
+
   type Query {
     allProducts: [Product!]!
+    allCategories: [Category!]!
   }
 `
 
